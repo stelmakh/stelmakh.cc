@@ -1,0 +1,107 @@
+$phone = '(max-width: 767px)'
+
+*
+  box-sizing: border-box
+
+body
+  font-family: 'Droid Sans', serif
+
+.Content
+  text-align: center
+  overflow: hidden
+
+  &Inner
+    margin-top: 75px
+    display: flex
+    flex-direction: column
+    justify-content: flex-start
+    align-items: center
+    margin-bottom: 50px
+
+.Section
+  display: flex
+  padding: 24px 0
+
+  &Half
+    flex: 0 0 50%
+    display: flex
+    flex-direction: column
+    justify-content: flex-start
+    align-items: center
+    padding: 0 24px
+
+  @media $phone
+    padding: 0
+    flex-direction: column
+    &Half
+      padding: 24px
+      width: 100%
+      flex: 1 0 auto
+
+  &Title
+    width: 100%
+    text-align: center
+    font-size: 28px
+    padding: 24px 0 12px
+    font-family: 'Droid Sans Mono', serif
+
+  &Subtitle
+    width: 100%
+    text-align: left
+    font-size: 16px
+    margin-bottom: 12px
+    font-family: 'Droid Sans Mono', serif
+    color: #0043ad
+
+  &Text
+    color: #666
+    font-size: 14px
+    text-align: left
+    width: 100%
+    line-height: 22px
+    word-spacing: .4em
+
+.ImageWrapper
+  width: 200px
+  height: 200px
+  overflow: hidden
+  border-radius: 50%
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5)
+  margin-top: 48px
+
+
+  @media $phone
+    margin-top: 0
+
+  img
+    max-width: 200px
+    object-fit: cover
+
+.Links
+  font-size: 24px
+  line-height: 36px
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  height: 100%
+  padding: 24px 0
+
+  @media $phone
+    height: auto
+    padding: 24px 0 0
+
+.hellyeah
+  color: #F4364C
+  &:hover
+    color: darken(#F4364C, 40%)
+
+.u-highlight
+  color: #0043ad
+
+a
+  cursor: pointer
+  color: #0043ad
+
+  &:hover
+    color: darken(#0043ad, 40%)
