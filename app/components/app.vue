@@ -9,7 +9,7 @@
         <div class="Intro">
           <div>Hello!</div>
           I'm a Software Developer and Web Consultant from Kyiv, Ukraine.
-          <div>Part of <a href="http://hellyeah.is"> Hellyeah</a> team.</div>
+          <div>Part of <a target='_blank' href="http://hellyeah.is"> Hellyeah</a> team.</div>
         </div>
       </div>
       <div id="about" class="About">
@@ -45,15 +45,15 @@
               </div>
           </div>
       </div>
-      <div id="contact" class="Contact">
-          <div class="Links">
-            <a href="https://github.com/stelmakh">github</a>
-            <span>/</span>
-            <a href="https://www.facebook.com/vk.stelmakh">facebook</a>
-            <span>/</span>
-            <a href="https://twitter.com/vstelmakh">twitter</a>
-          </div>
-      </div>
+      <!-- <div id="contact" class="Contact"> -->
+      <!--     <div class="Links"> -->
+      <!--       <a href="https://github.com/stelmakh">github</a> -->
+      <!--       <span>/</span> -->
+      <!--       <a href="https://www.facebook.com/vk.stelmakh">facebook</a> -->
+      <!--       <span>/</span> -->
+      <!--       <a href="https://twitter.com/vstelmakh">twitter</a> -->
+      <!--     </div> -->
+      <!-- </div> -->
     </section>
   </div>
 </template>
@@ -78,28 +78,36 @@
       flex: 0 0 auto
       margin-top: 0
 
-    @media (max-width: 767px)
+    @media (max-width: 576px)
       flex-direction: column
+
+    @media (min-width: 576px) and (max-width: 1000px)
+      padding: 0 24px
 
   .Intro
     text-align: left
     font-size: 50px
     line-height: 48px
-    font-family: 'Lato Thin', serif
+    font-family: 'Lato', serif
+    font-weight: 300
     color: #777
     margin-left: 24px
 
     a
       color: #777
-      text-decoration: underline
+      text-decoration: none
+      border-bottom: 1px solid #777
       &:hover
         color: #F4364C
+        border-bottom: 1px solid #F4364C
 
     @media (max-width: 767px)
-      padding: 24px 12px
       margin-left: 0
-      font-size: 28px
-      line-height: 32px
+      font-size: 42px
+      line-height: 48px
+
+    @media (max-width: 1000px)
+      padding: 24px 12px
 
     &-smallTitle
       width: 100%

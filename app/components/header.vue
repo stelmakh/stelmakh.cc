@@ -15,6 +15,15 @@
         <div class="HeaderContacts">
           <a href="mailto:volodymyr@stelmakh.cc">volodymyr@stelmakh.cc</a>
           <a href="tel:+380999728972">+38099-972-8-972</a>
+          <div id="contact" class="Contact">
+              <div class="Links">
+                <a target='_blank' href="https://github.com/stelmakh"><i class="fa fa-github" aria-hidden="true"></i></a>
+                <span>/</span>
+                <a target='_blank' href="https://www.facebook.com/vk.stelmakh"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                <span>/</span>
+                <a target='_blank' href="https://twitter.com/vstelmakh"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+              </div>
+          </div>
         </div>
       </div>
     </div>
@@ -33,11 +42,7 @@
     display: flex
     justify-content: flex-start
     align-items: center
-    padding: 8px 0
-
-    @media (max-width: 767px)
-      padding: 8px 12px
-
+    padding: 8px 12px
 
     &.large
       height: 200px
@@ -60,6 +65,9 @@
         justify-content: center
         align-items: center
 
+      &-left
+        padding-top: 4px
+
     .HeaderName
       height: 100%
       width: 80px
@@ -77,18 +85,15 @@
         font-size: 14px
         line-height: 18px
         color: #535353
-        font-family: 'Lato Light', serif
+        font-family: 'Lato', serif
+        font-weight: 300
 
 
     .HeaderLogo
       background: url("/images/logo.svg")
       background-size: cover
-      height: 50px
-      width: 50px
-
-      @media (max-width: 767px)
-        height: 36px
-        width: 36px
+      height: 54px
+      width: 54px
 
     .HeaderLink
       cursor: pointer
