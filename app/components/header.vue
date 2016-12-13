@@ -35,6 +35,10 @@
     align-items: center
     padding: 8px 0
 
+    @media (max-width: 767px)
+      padding: 8px 12px
+
+
     &.large
       height: 200px
 
@@ -81,6 +85,10 @@
       background-size: cover
       height: 50px
       width: 50px
+
+      @media (max-width: 767px)
+        height: 36px
+        width: 36px
 
     .HeaderLink
       cursor: pointer

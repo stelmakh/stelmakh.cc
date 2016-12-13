@@ -25,6 +25,9 @@ body
     justify-content: flex-start
     align-items: center
 
+    @media $phone
+      margin-top: 24px
+
 .Section
   display: flex
   padding: 24px 0
@@ -38,7 +41,7 @@ body
     padding: 0 24px
 
   @media $phone
-    padding: 0
+    padding: 0 12px
     flex-direction: column
     &Half
       padding: 24px
@@ -89,6 +92,19 @@ body
       line-height: 34px
       padding-top: 10px
 
+    @media $phone
+      .SectionPairTitle
+        font-size: 60px
+        line-height: 34px
+        z-index: -1
+
+      .SectionPairText
+        margin-left: 45px
+        font-family: 'Lato', serif
+        color: #0043ad
+        font-size: 16px
+        line-height: 24px
+        padding-top: 10px
 
 .ImageWrapper
   width: 200px
@@ -118,7 +134,7 @@ body
 
   @media $phone
     height: auto
-    padding: 24px 0 0
+    padding: 24px 12px
 
 .hellyeah
   color: #F4364C

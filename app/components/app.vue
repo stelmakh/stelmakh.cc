@@ -78,6 +78,9 @@
       flex: 0 0 auto
       margin-top: 0
 
+    @media (max-width: 767px)
+      flex-direction: column
+
   .Intro
     text-align: left
     font-size: 50px
@@ -93,7 +96,10 @@
         color: #F4364C
 
     @media (max-width: 767px)
-      padding: 48px 24px 72px
+      padding: 24px 12px
+      margin-left: 0
+      font-size: 28px
+      line-height: 32px
 
     &-smallTitle
       width: 100%
