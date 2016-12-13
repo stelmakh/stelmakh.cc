@@ -1,13 +1,21 @@
 <template>
   <header>
     <div class="HeaderNav">
-      <div class="HeaderLink">
-        Volodymyr Stelmakh
+      <div class="HeaderNav-left">
+        <div class="HeaderLink">
+          <router-link to="/">
+            <div class="HeaderLogo"></div>
+          </router-link>
+        </div>
+        <div class="HeaderName">
+          Volodymyr Stelmakh
+        </div>
       </div>
-      <div class="HeaderLink">
-        <router-link to="/">
-          <div class="HeaderLogo"></div>
-        </router-link>
+      <div class="HeaderNav-right">
+        <div class="HeaderContacts">
+          <a href="mailto:volodymyr@stelmakh.cc">volodymyr@stelmakh.cc</a>
+          <a href="tel:+380999728972">+38099-972-8-972</a>
+        </div>
       </div>
     </div>
   </header>
@@ -21,20 +29,11 @@
 
 <style lang="stylus" scoped>
   header
-    position: fixed
-    top: 0
-    left: 0
-    right: 0
-    background: url('images/bg.jpg')
-    background-size: cover
-    color: white
+    color: black
     display: flex
-    justify-content: flex-end
+    justify-content: flex-start
     align-items: center
-    padding: 8px 24px
-    transition: height .4s ease
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5)
-    font-family: 'Droid Sans Mono', serif
+    padding: 8px 0
 
     &.large
       height: 200px
@@ -47,12 +46,38 @@
       display: flex
 
     .HeaderNav
+      width: 100%
       display: flex
-      justify-content: center
+      justify-content: space-between
       align-items: center
 
+      &-left, &-right
+        display: flex
+        justify-content: center
+        align-items: center
+
+    .HeaderName
+      height: 100%
+      width: 80px
+      margin-left: 12px
+      text-align: left
+      font-size: 14px
+      line-height: 16px
+
+    .HeaderContacts
+      display: flex
+      flex-direction: column
+      align-items: flex-start
+      a
+        text-decoration: none
+        font-size: 14px
+        line-height: 18px
+        color: #535353
+        font-family: 'Lato Light', serif
+
+
     .HeaderLogo
-      background: url("/images/logo-white.svg")
+      background: url("/images/logo.svg")
       background-size: cover
       height: 50px
       width: 50px

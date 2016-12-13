@@ -4,11 +4,19 @@ $phone = '(max-width: 767px)'
   box-sizing: border-box
 
 body
-  font-family: 'Droid Sans', serif
+  font-family: 'Lato', serif
+
+#content
+  display: flex
+  justify-content: center
+  background: url("/images/logo-pale.svg") no-repeat calc(100% + 1600px) calc(100% + 2400px)
+  background-size: 3000px
 
 .Content
   text-align: center
   overflow: hidden
+  max-width: 1000px
+  min-height: 100vh
 
   &Inner
     margin-top: 75px
@@ -16,7 +24,6 @@ body
     flex-direction: column
     justify-content: flex-start
     align-items: center
-    margin-bottom: 50px
 
 .Section
   display: flex
@@ -43,14 +50,14 @@ body
     text-align: center
     font-size: 28px
     padding: 24px 0 12px
-    font-family: 'Droid Sans Mono', serif
+    font-family: 'Lato', serif
 
   &Subtitle
     width: 100%
     text-align: left
     font-size: 16px
     margin-bottom: 12px
-    font-family: 'Droid Sans Mono', serif
+    font-family: 'Lato', serif
     color: #0043ad
 
   &Text
@@ -61,12 +68,33 @@ body
     line-height: 22px
     word-spacing: .4em
 
+  &TextPair
+    position: relative
+    z-index: 2
+    height: 120px
+
+    .SectionPairTitle
+      position: absolute
+      font-family: 'Lato Black', serif
+      color: #f1f1f1
+      font-size: 120px
+      line-height: 34px
+      z-index: -1
+
+    .SectionPairText
+      margin-left: 145px
+      font-family: 'Lato', serif
+      color: #0043ad
+      font-size: 18px
+      line-height: 34px
+      padding-top: 10px
+
+
 .ImageWrapper
   width: 200px
   height: 200px
   overflow: hidden
   border-radius: 50%
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5)
   margin-top: 48px
 
 
@@ -78,14 +106,15 @@ body
     object-fit: cover
 
 .Links
-  font-size: 24px
-  line-height: 36px
-  display: flex
-  flex-direction: column
-  justify-content: center
-  align-items: center
-  height: 100%
+  font-size: 18px
+  line-height: 34px
+  color: #535353
   padding: 24px 0
+  font-family: 'Lato Thin', serif
+
+  a
+    color: #535353
+    text-decoration: none
 
   @media $phone
     height: auto
@@ -98,10 +127,3 @@ body
 
 .u-highlight
   color: #0043ad
-
-a
-  cursor: pointer
-  color: #0043ad
-
-  &:hover
-    color: darken(#0043ad, 40%)
