@@ -7,12 +7,17 @@ $desktop = '(min-width: 1000px)'
 
 body
   font-family: 'Lato', serif
+  background: #0043ad
 
 #content
   display: flex
   justify-content: center
+  @media $phone-lg
+    border-bottom: 2px solid #0043ad
+    padding-bottom: 30px
+    background: white
   @media $desktop
-    background: url("/images/logo-pale.svg") no-repeat calc(100% + 1600px) calc(100% + 2400px)
+    background: white url("/images/logo-pale.svg") no-repeat calc(100% + 1600px) calc(100% + 2400px)
     background-size: 3000px
 
 .Content
@@ -99,7 +104,7 @@ body
 
     @media $phone
       .SectionPairTitle
-        font-size: 90px
+        font-size: 120px
         line-height: 34px
         z-index: -1
 
